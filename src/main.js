@@ -1,6 +1,9 @@
 import firebase from "./firebase/firebase.js";
 import firebaseConfig from "./config/firebaseConfig.js";
+
 import sync from "./database/sync.js";
+
+import App from "./core/app.js";
 
 async function start(){
 
@@ -8,7 +11,7 @@ async function start(){
 
     sync.start();
 
-    console.log("Grupo Dabroy ERP iniciado");
+    await App.init();
 
 }
 
